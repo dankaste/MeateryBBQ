@@ -1,20 +1,85 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<header>
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-black scrolling-navbar" [containerInside]="false">
+        <logo>
+            <a class="logo navbar-brand" href="#"><strong>Meatery</strong></a>
+        </logo>
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active waves-light" mdbRippleRadius>
+                    <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active waves-light" mdbRippleRadius>
+                    <a class="nav-link">Menu <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item waves-light" mdbRippleRadius>
+                    <a class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+    <!-- Main -->
+    <div class="view intro hm-black-light">
+        <div class="full-bg-img flex-center">
+            <div class="container text-center white-text wow fadeInUp">
+                <h1 style="font-size:82px">Meatery</h1>
+                <br>
+                <h1 class="h1-responsive">Bold . Backyard . BBQ</h1>
+                <br>
+                <br>
+                <h2 class="h2-responsive">BBQ made from the highest quality ingredients</h2>
+                <br><br>
+
+                <a href="" style="color:white"><h2>Place your order&nbsp;&nbsp;></h2></a>
+            </div>
+        </div>
+    </div>
+    <!-- /.Main -->
+</header>
+
+<main class="text-center py-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                  <h1>About Us</h1>
+                    <p align="justify">The Meatery BBQ is focused on providing the highest quality barbecue possible.  They
+                        offer wood fired BBQ seasoned with traditional flavors of garlic, onion, salt, pepper, along with our one of a kind spice rubs and injections. The result is high quality barbecue
+                        that is unbelievably tender and full of flavor.</p>
+                    <br>
+                    <p align="justify">Currently the Meatery BBQ partners with gyms and trainers around Columbus to offer PERFECTLY PORTIONED MEALS which help individuals eat healthy and achieve fitness goals while dealing with the fast pace of every day life.</p>
+
+                    <br>
+                    <p align="justify">
+                        During fall 2017 the Meatery BBQ will be releasing their full menu of smoked meats and bold flavored side dishes. These items will be delivered directly to your door and will be great for gatherings of all sizes.
+                    </p>
+                    <br>
+                    <p align="justify">Also be on the look out for Meatery BBQ spices, rubs, and sauces at select retail locations and available for purchase online!!</p>
+
+                    <br><br>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                  <img src="../assets/asparagus.jpg" class="img-fluid" alt="Responsive image">
+                  <br><br>
+                  <h1>Fitness Feast</h1>
+                    <p align="justify">The Meatery has partnered with select gyms around the Columbus area to offer their members PERFECTLY PORTIONED MEALS, which help individuals eat healthy and achieve fitness goals while dealing with the fast pace of every day life. </p>
+                    <br>
+                    <p align="justify">​
+                        Members create their own healthy meals from a selection of different proteins, starches, and vegetables-including vegan options.</p>
+
+                    <br>
+                    <p align="justify">
+                        The Meatery uses only the highest quality ingredients, including local when available.
+                    </p>
+                    <br>
+                    <p align="justify">The flavor of the food comes from house made rubs and marinades, creating very flavorful food without butter or other artificial additives. </p>
+                    <br>
+                    <p align="justify">Meals are pre-cooked and packaged in microwavable containers making them very fresh tasting and easy to take while on the go.</p>
+                  </div>
+            </div>
+        </div>
+
+    </main>
