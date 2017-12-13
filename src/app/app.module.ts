@@ -1,19 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { MenuComponent } from './menu/menu.component';
+import { MenuItemsService } from './menu-items.service';
+import { HomeComponent } from './home/home.component';
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatIconModule,
+  MatToolbarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    MDBBootstrapModule.forRoot()
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
+    MatToolbarModule
   ],
-  schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [MenuItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
