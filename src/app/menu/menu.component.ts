@@ -10,6 +10,9 @@ import { MenuItem } from '../menu-item';
 export class MenuComponent implements OnInit {
 
   menuItems: MenuItem[];
+  proteinItems: MenuItem[];
+  vegetableItems: MenuItem[];
+  starchItems: MenuItem[];
 
   constructor(private menuService: MenuItemsService) { }
 
@@ -19,6 +22,9 @@ export class MenuComponent implements OnInit {
 
   getMenuItems(): void {
     this.menuService.getMenuItems().subscribe( items => this.menuItems = items);
+    this.menuService.getProteinItems().subscribe( items => this.proteinItems = items);
+    this.menuService.getVegetableItems().subscribe( items => this.vegetableItems = items);
+    this.menuService.getStarchItems().subscribe( items => this.starchItems = items);
   }
 
 }

@@ -22,6 +22,17 @@ $accent: mat-color($meatery-app-accent);
   color: $primary-light;
 }
 
+.tile{
+  background-size: contain;
+  text-align: center;
+  color: $primary-light;
+}
+
+.brisket-background{
+  background:url("../assets/brisket.png") no-repeat center center;
+}
+
+
 .ribs-background{
   background:linear-gradient($primary,$primary),url("../assets/ribsGrill.jpg") no-repeat center center;
 }

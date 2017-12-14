@@ -1,5 +1,5 @@
 export enum MenuItemCategory{
-  Protien,
+  Protein,
   Startch,
   Vegetable
 }

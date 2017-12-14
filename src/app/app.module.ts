@@ -11,6 +11,9 @@ import {
   MatButtonModule,
   MatMenuModule,
   MatIconModule,
+  MatStepperModule,
+  MatListModule,
+  MatGridListModule,
   MatToolbarModule } from '@angular/material';
 
 @NgModule({
@@ -27,6 +30,9 @@ import {
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
+    MatStepperModule,
+    MatListModule,
+    MatGridListModule,
     MatToolbarModule
   ],
   providers: [MenuItemsService],

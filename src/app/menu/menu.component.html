@@ -3,12 +3,51 @@
           <div ngClass="mat-display-4" ngClass.xs="mat-display-2">Heat & Eat Meals</div>
           <div ngClass="mat-display-2"  ngClass.xs="mat-display-1">Simple . Flavorful . Healthy</div>
     </div>
-    <div fxFlex="0 1 auto" class="body" fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex="0 1 auto" class="body" fxLayout="column" fxLayoutAlign="center center">
         <h1 align="center">Reheats in 90 seconds</h1>
         <br>
         <h3 align="center">​Create your own meals by choosing 6oz of protein, 1/2 cup of starch, and 1 cup vegetables.</h3>
         <br>
         <h2 align="center">Delivery Included in price</h2>
-    </div>
 
+        <mat-horizontal-stepper linear>
+            <mat-step label="Protien">
+              <h4>Pick 1 Protein</h4>
+              <mat-grid-list cols=2 gutterSize="12px">
+                    <mat-grid-tile class="tile brisket-background" *ngFor="let item of proteinItems">
+                       <mat-grid-tile-header>{{item.name}} {{item.price|currency}}</mat-grid-tile-header>
+
+                       <mat-grid-tile-footer fxLayoutAlign="center center"><button fxFlex="0 0 auto" mat-mini-fab color="primary"><mat-icon>add</mat-icon></button></mat-grid-tile-footer>
+                    </mat-grid-tile>
+              </mat-grid-list>
+              <div>
+              </div>
+            </mat-step>
+            <mat-step label="Starch">
+                <h4>Pick 1 Starche</h4>
+                <mat-selection-list>
+                    <mat-list-option *ngFor="let item of starchItems">
+                        {{item.name}}
+                      </mat-list-option>
+                </mat-selection-list>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </mat-step>
+              <mat-step label="Vegetable">
+                <h4>Pick 1 Vegetable</h4>
+                  <mat-selection-list>
+                      <mat-list-option *ngFor="let item of vegetableItems">
+                          {{item.name}}
+                        </mat-list-option>
+                  </mat-selection-list>
+                  <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                  </div>
+                </mat-step>
+          </mat-horizontal-stepper>
+
+    </div>
 </div>
