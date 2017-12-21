@@ -21,7 +21,7 @@ export class Meal implements ICartItem{
         this.items.push( item );
 
         while( this.RemainingVegetableSelections() < 0 ) {
-            this.Deselect( this.items.find( (i) => i.type === MenuItemCategory.Vegetable );
+            this.Deselect( this.items.find( (i) => i.type === MenuItemCategory.Vegetable ));
         }
     }
  
