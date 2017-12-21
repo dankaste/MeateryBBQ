@@ -5,8 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
-import { MenuItemsService } from './menu-items.service';
+import { MenuItemsService } from './services/menu-items.service';
 import { HomeComponent } from './home/home.component';
+import { CartService } from './services/cart.service';
 import {
   MatButtonModule,
   MatMenuModule,
@@ -14,13 +15,17 @@ import {
   MatStepperModule,
   MatListModule,
   MatGridListModule,
+  MatChipsModule,
+  MatSlideToggleModule,
   MatToolbarModule } from '@angular/material';
+import { MenuItemListComponent } from './menu-item-list/menu-item-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    MenuItemListComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +38,11 @@ import {
     MatStepperModule,
     MatListModule,
     MatGridListModule,
+    MatChipsModule,
+    MatSlideToggleModule,
     MatToolbarModule
   ],
-  providers: [MenuItemsService],
+  providers: [MenuItemsService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

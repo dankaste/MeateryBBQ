@@ -1,0 +1,7 @@
+<mat-grid-list [cols]="numCols | async" gutterSize="12px">
+    <mat-grid-tile *ngFor="let item of items" class="tile brisket-background" 
+    [ngClass]="{'notSelected' : !itemIsSelected(item) && remainingSelections <= 0}" 
+    (click)="selectItem(item)">
+       <mat-grid-tile-header><mat-icon *ngIf="itemIsSelected(item)">done</mat-icon><span>{{item.name}} {{item.price|currency}}</span> </mat-grid-tile-header>
+    </mat-grid-tile>
+</mat-grid-list>

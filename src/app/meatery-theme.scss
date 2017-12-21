@@ -25,11 +25,16 @@ $accent: mat-color($meatery-app-accent);
 .tile{
   background-size: contain;
   text-align: center;
+  background-blend-mode:soft-light;
   color: $primary-light;
 }
 
+.tile.notSelected{
+  background-blend-mode:hard-light;
+}
+
 .brisket-background{
-  background:url("../assets/brisket.png") no-repeat center center;
+  background:linear-gradient($primary,$primary),url("../assets/brisket.png") no-repeat center center;
 }
 
 
