@@ -8,7 +8,7 @@ import { CartService } from './services/cart.service';
 })
 export class AppComponent {
   title = 'app';
-  constructor( public cartService: CartService){
+  constructor(){
 
   }
 }

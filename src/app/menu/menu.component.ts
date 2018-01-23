@@ -3,6 +3,8 @@ import { MenuItemsService } from '../services/menu-items.service';
 import { MenuItem, MenuItemCategory } from '../menu-item';
 import { Meal } from '../meal';
 import { CartService } from '../services/cart.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { CheckoutComponent } from '../checkout/checkout.component';
 
 @Component({
   selector: 'app-menu',
@@ -21,7 +23,7 @@ export class MenuComponent implements OnInit {
 
   public requiredMeals: string[] = ["Meal 1", "Meal 2", "Meal 3"]
 
-  constructor(private menuService: MenuItemsService, public cartService: CartService) { }
+  constructor(private menuService: MenuItemsService, public cartService: CartService, public dialogService: MatDialog) { }
 
   ngOnInit() {
     this.getMenuItems();
@@ -49,5 +51,9 @@ export class MenuComponent implements OnInit {
 
   selectMenuItem( item: MenuItem ){
     this.workingMeal.MakeSelection(item);
+  }
+
+  openCheckoutDialog(): void {
+    let dialogRef = this.dialogService.open(CheckoutComponent);
   }
 }

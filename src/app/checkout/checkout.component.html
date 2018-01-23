@@ -1,0 +1,38 @@
+<mat-vertical-stepper linear>
+  <mat-step label="Delivery Info">
+    <div fxLayout="column">
+        <mat-form-field>
+            <input matInput name="name" type="text" [(ngModel)]="personalInfo.name" required/>
+            <mat-label>Name</mat-label>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput name="address" type="text" [(ngModel)]="personalInfo.address" required/>
+            <mat-label>Address</mat-label>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput name="city" type="text" [(ngModel)]="personalInfo.city" required/>
+            <mat-label>City</mat-label>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput name="state" type="text" [(ngModel)]="personalInfo.state" required/>
+            <mat-label>State</mat-label>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput name="zip" type="number" [(ngModel)]="personalInfo.zip" required/>
+            <mat-label>Zip</mat-label>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput name="email" type="text" [(ngModel)]="personalInfo.email" required/>
+            <mat-label>Email</mat-label>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput name="phone" type="text" [(ngModel)]="personalInfo.phone" required/>
+            <mat-label>Phone</mat-label>
+          </mat-form-field>
+    </div>
+  </mat-step>
+  <mat-step label="Payment Info">
+  </mat-step>
+</mat-vertical-stepper>
+<button mat-button>Cancel</button>
+<button mat-raised-button color=primary>Finish Order</button>
