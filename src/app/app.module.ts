@@ -26,6 +26,9 @@ import { MenuItemListComponent } from './menu-item-list/menu-item-list.component
 import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
+  entryComponents: [
+    CheckoutComponent
+  ],
   declarations: [
     AppComponent,
     MenuComponent,

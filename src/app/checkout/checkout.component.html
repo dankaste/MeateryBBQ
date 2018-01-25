@@ -1,38 +1,61 @@
-<mat-vertical-stepper linear>
-  <mat-step label="Delivery Info">
-    <div fxLayout="column">
-        <mat-form-field>
-            <input matInput name="name" type="text" [(ngModel)]="personalInfo.name" required/>
-            <mat-label>Name</mat-label>
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput name="address" type="text" [(ngModel)]="personalInfo.address" required/>
-            <mat-label>Address</mat-label>
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput name="city" type="text" [(ngModel)]="personalInfo.city" required/>
-            <mat-label>City</mat-label>
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput name="state" type="text" [(ngModel)]="personalInfo.state" required/>
-            <mat-label>State</mat-label>
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput name="zip" type="number" [(ngModel)]="personalInfo.zip" required/>
-            <mat-label>Zip</mat-label>
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput name="email" type="text" [(ngModel)]="personalInfo.email" required/>
-            <mat-label>Email</mat-label>
-          </mat-form-field>
-          <mat-form-field>
-            <input matInput name="phone" type="text" [(ngModel)]="personalInfo.phone" required/>
-            <mat-label>Phone</mat-label>
-          </mat-form-field>
-    </div>
-  </mat-step>
-  <mat-step label="Payment Info">
-  </mat-step>
-</mat-vertical-stepper>
-<button mat-button>Cancel</button>
-<button mat-raised-button color=primary>Finish Order</button>
+<h1 mat-dialog-title>
+  Checkout
+</h1>
+<mat-dialog-content>
+  <mat-vertical-stepper [linear]="true">
+      <mat-step [stepControl]="deliveryInfoFormGroup">
+        <ng-template matStepLabel>
+            Delivery Info
+        </ng-template>
+        <form [formGroup]="deliveryInfoFormGroup">
+            <div fxLayout="column">
+                <mat-form-field>
+                    <input matInput name="name" type="text" formControlName="name"/>
+                    <mat-label>Name</mat-label>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput name="address" type="text" formControlName="address"/>
+                    <mat-label>Address</mat-label>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput name="city" type="text" formControlName="city"/>
+                    <mat-label>City</mat-label>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput name="state" type="text" formControlName="state"/>
+                    <mat-label>State</mat-label>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput name="zip" type="number" formControlName="zip"/>
+                    <mat-label>Zip</mat-label>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput name="email" type="text" formControlName="email"/>
+                    <mat-label>Email</mat-label>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <input matInput name="phone" type="tel" formControlName="phone"/>
+                    <mat-label>Phone</mat-label>
+                  </mat-form-field>
+            </div>
+        </form>
+      </mat-step>
+      <mat-step  [stepControl]="paymentInfoFormGroup">
+          <ng-template matStepLabel>
+              Payment Info
+          </ng-template>
+          <form [formGroup]="paymentInfoFormGroup">
+              <div fxLayout="column">
+                  <mat-form-field>
+                    <input matInput name="name" type="text" formControlName="cardNumber"/>
+                    <mat-label>Card Number</mat-label>
+                  </mat-form-field>
+              </div>
+          </form>
+      </mat-step>
+    </mat-vertical-stepper>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color=primary>Finish Order</button>
+</mat-dialog-actions>
